@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Variable } from "lucide-react";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,18 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ClerkProvider appearance={{
-        layout:{
-          logoImageUrl:'/icons/yoom-logo.svg',
-          socialButtonsVariant:'iconButton'
-
-        },
-        variables:{
-          
-        }
-      }}  >
-      <body className={`${inter.className} bg-dark-2  ` }>{children}</body>
-      </ClerkProvider> 
+      <ClerkProvider
+        appearance={{
+          layout: {
+            logoImageUrl: "/icons/yoom-logo.svg",
+            socialButtonsVariant: "iconButton",
+          },
+          variables: {},
+        }}
+      >
+        <body className={`${inter.className} bg-dark-2  `}>
+          {children}
+          <Toaster />
+        </body>
+      </ClerkProvider>
     </html>
   );
 }

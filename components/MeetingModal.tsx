@@ -52,7 +52,7 @@ const MeetingModal = ({
             <h1 className={cn('text-3xl font-bold leading-[42px]' , className)}>{title} </h1>
                 {children}
             
-            <Button className="bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0 " onClick={()=>handleClick}> 
+            <Button className="bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0 " onClick={handleClick}> 
             {buttonIcon && (<Image src={buttonIcon} alt="btnIcon" height={13} width={13} />)}
             &nbsp;
             {buttonText || 'Schedule Meeting'} 
