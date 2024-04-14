@@ -8,6 +8,9 @@ import StreamVideoProvider from "@/providers/StreamClientProvider";
 export const metadata: Metadata = {
   title: "ZOOM",
   description: "A workspace for your team, powered by Stream Chat and Clerk.",
+  icons:{
+    icon : '/icons/logo.svg'
+  }
 };
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
