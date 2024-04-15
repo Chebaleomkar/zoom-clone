@@ -81,7 +81,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
             title={
               (meeting as Call).state?.custom?.description ||
               (meeting as CallRecording).filename?.substring(0, 20) ||
-              'No Description'
+              'Personal Meeting'
             }
             date={
               (meeting as Call).state?.startsAt?.toLocaleString() ||
